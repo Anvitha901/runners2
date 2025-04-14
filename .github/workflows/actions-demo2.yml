@@ -1,0 +1,14 @@
+name: Deploy from Repo B
+
+on:
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: [self-hosted]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Deploy Logic
+        run: echo "Triggered from Repo A after delay!"
